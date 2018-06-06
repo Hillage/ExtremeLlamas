@@ -15,9 +15,4 @@ public class LlamaEssence extends Item {
 		setUnlocalizedName(ExtremeLlamas.MODID + ".llamaessence"); //Used for localization (en_us.lang)
 		this.setCreativeTab(CreativeTabs.MISC);
 	}
-	
-	@SideOnly(Side.CLIENT)
-	public void initModel() {
-		ModelLoader.setCustomModelResourceLocation(this,  0,  new ModelResourceLocation(getRegistryName(), "inventory"));
-	}
 }

@@ -17,7 +17,9 @@ import tech.hillage.extremellamas.items.LlamaEssence;
 
 @Mod.EventBusSubscriber
 public class CommonProxy {
+	
     public void preInit(FMLPreInitializationEvent e) {
+    	ModItems.init();
     }
 
     public void init(FMLInitializationEvent e) {
@@ -33,8 +35,8 @@ public class CommonProxy {
 
     @SubscribeEvent
     public static void registerItems(RegistryEvent.Register<Item> event) {
-    	event.getRegistry().register(new LlamaEssence());
-    	
     	//event.getRegistry().register(new ItemBlock(ModBlocks.llamaBlock).setRegistryName(ModBlocks.llamaBlock.getRegistryName()));
+    	
+    	event.getRegistry().register(new LlamaEssence());
     }
 }
